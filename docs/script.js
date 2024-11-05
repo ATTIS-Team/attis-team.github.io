@@ -21,7 +21,7 @@ async function loadPosts() {
             postElement.classList.add("post");
 
             postElement.innerHTML = `
-                <h2><a href="post-template.html?post=${post.name}">${post.title}</a></h2>
+                <h2><a href="post.html?post=${post.name}">${post.title}</a></h2>
             `;
 
             postsContainer.appendChild(postElement);
