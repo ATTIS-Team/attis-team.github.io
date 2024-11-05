@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #444;
+}
+
+.post {
+    background: #fff;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+#post-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style for the Go Back button */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect with animation */
+.back-button:hover {
+    transform: translateX(-5px);
+    background-color: #0056b3;
+}
+
+/* Content styling */
+#post-content h1 {
+    text-align: center;
+    margin-top: 60px; /* Offset to account for fixed back button */
+    font-size: 2em;
+    color: #444;
+}
+
+#post-content div {
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
