@@ -8,14 +8,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Go Back Button -->
     <a href="https://attis-team.github.io" class="back-button">← Go Back</a>
-
-    <!-- Main Content -->
     <main id="post-content">
         <h1>Loading post...</h1>
     </main>
-
+    <div class="footer">
+    © 2024 Danlo Corporation. All Rights Reserved.
+    </div>
     <script>
         async function loadPost() {
             const params = new URLSearchParams(window.location.search);
@@ -37,7 +36,7 @@
                 const postContainer = document.getElementById("post-content");
 
                 if (post) {
-                    document.title = post.title; // Set page title to post title
+                    document.title = post.title;
 
                     postContainer.innerHTML = `
                         <h1>${post.title}</h1>
