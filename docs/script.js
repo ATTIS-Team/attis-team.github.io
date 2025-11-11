@@ -1,4 +1,4 @@
-const url = 'https://api.jsonsilo.com/public/e89510bf-e125-4b39-8cd7-2c5bee9551c9';
+const url = 'https://api.jsonsilo.com/public/3de8bd06-d7a6-4ade-80b1-6d36a778f608';
 
 async function loadPosts() {
     try {
@@ -32,3 +32,4 @@ async function loadPosts() {
 }
 
 loadPosts();
+
