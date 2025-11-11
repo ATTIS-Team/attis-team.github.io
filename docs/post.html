@@ -15,21 +15,17 @@
     <div class="footer">
         © 2025 Danlo Corporation. All Rights Reserved.
     </div>
+
     <script>
         async function loadPost() {
             const params = new URLSearchParams(window.location.search);
             const postName = params.get('post');
-            const url = 'https://api.jsonsilo.com/public/3de8bd06-d7a6-4ade-80b1-6d36a778f608';
+            const urlParam = params.get('url');
+            const url = urlParam || 'https://api.jsonsilo.com/public/3de8bd06-d7a6-4ade-80b1-6d36a778f608';
 
             try {
-                const response = await fetch(url, {
-                    method: 'GET',
-                    headers: { 'Content-Type': 'application/json' }
-                });
-
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
+                const response = await fetch(url, { method: 'GET', headers: { 'Content-Type': 'application/json' } });
+                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
                 const posts = await response.json();
                 const post = posts.find(p => p.name === postName);
@@ -37,11 +33,14 @@
 
                 if (post) {
                     document.title = post.title;
-
                     postContainer.innerHTML = `
                         <h1>${post.title}</h1>
                         <div>${post.content}</div>
                     `;
+
+                    if (post.fullscreen === 1) {
+                        document.body.classList.add('fullscreen-mode');
+                    }
                 } else {
                     postContainer.innerHTML = "<p>Post not found.</p>";
                 }
@@ -55,5 +54,3 @@
     </script>
 </body>
 </html>
-
-
