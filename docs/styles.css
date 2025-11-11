@@ -1,3 +1,120 @@
+/* === Base Layout === */
+body {
+    font-family: "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    background-color: #f5f7fa;
+    color: #222;
+}
+
+main {
+    max-width: 800px;
+    margin: 100px auto 60px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+    color: #333;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #777;
+}
+
+/* === Buttons === */
+.login-button,
+.back-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.back-button {
+    left: 20px;
+    right: auto;
+}
+
+.login-button:hover,
+.back-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* === Modal (Login Form) === */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px 40px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.field {
+    position: relative;
+    margin: 20px 0;
+}
+
+.field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+.field label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: #fff;
+    padding: 0 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+.checkbox {
+    margin: 10px 0;
+}
+
+.checkbox label {
+    color: #333;
+    font-size: 14px;
+}
+
+/* === Custom JSON Container === */
 .custom-json-container {
     position: fixed;
     top: 70px;
@@ -32,7 +149,7 @@
     background-color: #0056b3;
 }
 
-/* Fullscreen mode */
+/* === Fullscreen Mode === */
 .fullscreen-mode main {
     position: fixed;
     top: 0;
