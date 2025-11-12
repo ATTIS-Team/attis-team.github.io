@@ -86,6 +86,7 @@ h1 {
     font-size: 0.9rem;
     width: 100%;
     margin-top: 40px;
+    position: fixed;
 }
 
 .footer br { display: none; }
@@ -278,3 +279,4 @@ input[type="submit"]:hover {
     background: linear-gradient(135deg, #007bff, #00b3ff);
     border: none;
 }
+
