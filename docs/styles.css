@@ -79,14 +79,16 @@ h1 {
 }
 
 .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #111;
+    color: #ccc;
+    padding: 20px 0;
     text-align: center;
-    position: fixed;
-    bottom: 0;
+    font-size: 0.9rem;
     width: 100%;
+    margin-top: 40px;
 }
+
+.footer br { display: none; }
 
 .login-button {
     position: fixed;
@@ -233,7 +235,6 @@ input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Fullscreen mode */
 .fullscreen-mode main {
     position: fixed;
     top: 0;
@@ -249,4 +250,31 @@ input[type="submit"]:hover {
 .fullscreen-mode .back-button,
 .fullscreen-mode .footer {
     z-index: 1000;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-bottom: 60px; /* space for footer */
+    }
+
+    .login-button {
+        top: 10px;
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        padding: 15px 10px;
+    }
+}
+
+.login-button, .back-button {
+    background: linear-gradient(135deg, #007bff, #00b3ff);
+    border: none;
 }
