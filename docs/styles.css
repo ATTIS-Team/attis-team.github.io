@@ -85,7 +85,7 @@ h1 {
 .footer {
     background-color: #111;
     color: #ccc;
-    padding: 20px 0;
+    padding: 5px 0;
     text-align: center;
     font-size: 0.9rem;
     width: 100%;
@@ -291,4 +291,5 @@ html, body {
   display: flex;
   flex-direction: column;
 }
+
 
